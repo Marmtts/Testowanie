@@ -1,0 +1,248 @@
+Plan testów dla sklepu internetowego
+
+Spis treści:
+
+1. Wstęp
+2. Zakres testów
+3. Przedmiot testów
+4. Kryteria zaliczenia
+5. Kryteria niezaliczenia
+6. Kryteria wejścia
+7. Kryteria wyjścia
+8. Lista funkcjonalności do przetestowania
+9. Środowisko testowe
+10. Kategorie błędów
+11. Miejsce testów
+12. Harmonogram testów
+13. Raporty z testów
+14. Lista narzędzi
+15. Zarządzanie incydentami
+16. Role i odpowiedzialność
+
+
+Wstęp
+
+
+Celem tworzonego planu testów jest szczegółowe przetestowanie
+funkcjonalności sklepu w oparciu o dostarczone wymagania. Adres
+sklepu to test.testowanie-oprogramowania.pl .
+Wszystkie napotkane defekty zostaną poprawione i przekazane
+testom do testów potwierdzających.
+
+
+Zakres testów
+
+
+Poziomy testów objęte w planie testów to:
+● Testowanie modułowe
+● Testowanie integracyjne
+● Testowanie akceptacyjne
+Typy testów ujęte w planie testów:
+● Testy funkcjonalne - oprogramowanie zostanie zweryfikowane
+pod kątem dostarczonych specyfikacji
+● Testy integracyjne - testowanie komunikacji pomiędzy API np.
+wdrożonego modułu przelewy24
+● Testy automatyczne - implementacja testów automatycznych
+do kluczowych funkcjonalności systemu według
+dostarczonych przypadków testowych
+Typy testów wykluczone z planu testów:
+● Testy bezpieczeństwa - brak kompetencji osób w zespole
+związanych z dziedziną pentestingu.
+
+
+Przedmiot testów
+
+
+Przedmiotem testów jest sklep internetowy dostępny pod adresem
+test.testowanie-oprogramowania.pl wraz z jego wszystkimi
+funkcjonalności.
+
+
+Kryteria zaliczenia
+
+Testy wydajnościowych
+● Czas odpowiedzi serwera nie może być dłuższy niż 500
+ms
+● Oprogramowanie musi wytrzymać obciążenie 1000
+użytkowników w tej samej chwili
+
+Testy funkcjonalne
+● Kryteria akceptacyjne są zgodne z obecną
+implementacją sklepu internetowego
+
+Testy automatyczne
+● Zostały zautomatyzowane wszystkie przypadki testowe
+● Testy zostały podłączone do narzędzia CI/CD - Jenkins
+
+
+Kryteria niezaliczenia
+
+
+
+Testy wydajnościowe
+● Czas odpowiedzi serwera jest dłuższy niż 500 ms
+
+Testy funkcjonalnych
+● Zaimplementowane funkcjonalności nie są zgodne z
+wymaganiami
+
+
+Kryteria wejścia
+
+
+● Uruchomione środowisko testowe
+● Środowisko testowe musi być zbliżone do środowiska
+produkcyjnego
+● Dostęp do urządzenia z systemem IOS
+
+
+Kryteria wyjścia
+
+
+● Wykonane wszystkie przypadki testowe
+● Wszystkie typy i poziomy testów uwzględnione w planie
+testów zostały zrealizowane
+● Poprawione zostały wszystkie defekty
+
+
+Lista funkcjonalności do przetestowania
+
+
+● Wyszukiwarka produktów - Przypadek testowy 001
+● Proces składania zamówienia - Przypadek testowy 002
+● Integracja z system przelewy24 - Przypadek testowy 003
+● Tworzenie produktu - Przypadek testowy 004
+● Panel administracyjny - Przypadek testowy 005
+
+
+Środowisko testowe
+
+
+Testy sklepu internetowego będą przeprowadzane na
+dedykowanym serwerze test.testowanie–oprogramowania.pl.
+Środowisko testowe jest zbliżone parametrami do środowiska
+produkcyjnego.
+Specyfikacja:
+Procesor: 2 GHz
+RAM: 4GB
+Dysk: 240 GB
+System: Linux Debian 17
+
+
+Test będą przeprowadzane przy użyciu poniższych urządzeń:
+
+Komputer PC
+● Procesor I3 3,6 GHz
+● Ram: 16 GB
+
+Urządzenie mobilne z system IOS Iphone 13
+● Procesor: Apple A15 Bionic
+● Pamięć Ram: 4GB
+● IOS wersja 16
+
+
+Kategorie błędów
+
+
+Wyróżniamy różne priorytety w naszym planie testów:
+● Awaria
+● Błąd blokujący
+● Błąd poważny
+● Błąd średni
+● Błąd trywialny
+
+
+Miejsce testów
+
+
+Testy będą przeprowadzane w siedzibie firmy wytwarzającej
+oprogramowanie przez testera.
+
+
+Harmonogram testów
+
+Testowanie statyczne
+● Weryfikacja przygotowanych dokumentacji
+● Weryfikacja historyjek użytkownika
+Czas: 10h
+
+Testy funkcjonalne
+● Weryfikacja zaimplementowanych funkcjonalności
+zgodnie z przygotowanymi założeniami
+● Raportowanie defektów
+● Wykonanie przypadków testowych
+Czas: 30h
+
+Testy wydajnościowe
+● Weryfikacja czasu odpowiedzi serwera
+● Weryfikacja obciążenia serwera użytkownikami
+Czas: 14h
+
+Testy automatyczne
+● Przygotowanie struktury plików
+● Implementacja testów automatycznych w oparciu o
+dostarczone przypadki testowe
+● Podłączenie testów pod narzędzie Jenkins
+● Podłączenie testów pod narzędzie Grafana
+Czas: 40h
+
+
+Raporty z testów
+
+
+● Raporty o wykrytych defektach
+● Zaprojektowane przypadki testowe
+● Skrypty testów automatycznych
+● Metryki z testów wydajnościowych
+
+
+Lista narzędzi
+
+Narzędzia do raportowania defektów
+● Jira
+
+Narzędzia do tworzenia przypadków testowych
+● TestLink
+● XRay
+
+Narzędzia do automatyzacji
+● WebdriverIO
+● SuperTest
+● Allure
+● Jenkins
+● Grafana
+
+Narzędzia do testów wydajnościowych
+● Jmeter
+
+Narzędzia do tworzenia zrzutów ekranu i filmików
+● PicPick
+● ShareX
+
+
+Zarządzanie incydentami
+
+
+Po wykryciu defektu taki defekt zostanie zgłoszony do systemu
+zarządzania defektami jakim jest Jira. Taki defekt będzie posiadał
+priorytet wskazany w planie testów oraz osobe, która będzie
+zajmowała się poprawą błędu.
+Gdy programista poprawi taki błąd to zostanie on następnie
+przekazany testerowi do przeprowadzenia testów potwierdzających.
+W momencie poprawnego naprawienia defektu, zgłoszenie
+zostanie zamknięte i przesunięte do kolumny na Gotowe.
+W przypadku nieprawidłowego naprawiania defektu, zgłoszenie na
+nowo zostanie przekazane do programisty.
+
+
+Role i odpowiedzialność
+
+
+Kierownik testów - nadzorowanie i organizowanie pracy całego
+zespołu testowego.
+Analityk testów - analizowanie podstawy testów. Przygotowywanie
+testaliów potrzebnych do testów. Wspieranie kierownika testów.
+Tester - Realizuje zadania wyznaczone przez kierownika testów,
+wykonuje testy i raportuje defekty.
+Administrator techniczny systemu - przygotowuje środowisko
+testowe i je nadzoruje podczas procesu testowego.
